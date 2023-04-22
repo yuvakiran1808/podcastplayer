@@ -25,10 +25,10 @@ router.param("userId", getUserById);
 
 router.post(
   "/create/podcast/:userId",
-  upload.single("video"),
   isSignedIn,
   isAuthenticated,
   isAdmin,
+  upload.single("video"),
   createPodcast
 );
 

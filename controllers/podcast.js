@@ -19,7 +19,7 @@ exports.createPodcast = (req,res,next)=>{
             return res.status(400).json({ error: 'Invalid file type' });
           }
 
-          // video = req.file.path;
+         
 
           const podcast = new Podcast({
             name,
