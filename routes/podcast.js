@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const { createPodcast } = require("../controllers/podcast");
+const { createPodcast ,getAllPodcasts} = require("../controllers/podcast");
 const {getUserById}  = require("../controllers/user")
 const { isSignedIn, isAuthenticated, isAdmin } = require("../controllers/auth");
 const multer = require("multer");
@@ -33,3 +33,6 @@ router.post(
 );
 
 module.exports = router;
+
+
+router.get("/podcasts",getAllPodcasts)
